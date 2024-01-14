@@ -1,3 +1,7 @@
+/**
+ * Description placeholder
+ * @date 1/15/2024 - 6:28:23 AM
+ */
 function generatePascalTriangle() {
   var rows = document.getElementById("rows").value;
   var triangle = document.getElementById("triangle");
@@ -19,9 +23,9 @@ function generatePascalTriangle() {
   }
 
   // Menampilkan segitiga Pascal ke dalam elemen HTML
-  for (var i = 0; i < rows; i++) {
+  for (var k = 0; k < rows; k++) {
     var row = document.createElement("p");
-    row.innerHTML = pascal[i].join(" ");
+    row.innerHTML = pascal[k].join(" ");
     triangle.appendChild(row);
   }
 }
