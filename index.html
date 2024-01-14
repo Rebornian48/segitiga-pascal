@@ -20,19 +20,70 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="author" content="Rebornian48" />
     <title>Segitiga Pascal</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
-    <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-4">Segitiga Pascal</h1>
-        <div class="flex items-center mb-4">
-            <label for="rows" class="mr-2">Jumlah Baris:</label>
-            <input type="number" id="rows" min="1" max="20" class="border border-gray-300 px-2 py-1 rounded">
-            <button onclick="generatePascalTriangle()"
-                class="ml-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Generate</button>
+<body>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl">Rebornian48</a>
         </div>
-        <div id="triangle" class="border border-gray-300 p-4"></div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <div class="dropdown mb-5">
+                    <div tabindex="0" role="button" class="m-1">
+                        Tema
+                        <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+                        <li><input type="radio" name="theme-dropdown"
+                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Gelap"
+                                value="dark" /></li>
+                        <li><input type="radio" name="theme-dropdown"
+                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                aria-label="Terang" value="light" /></li>
+                        <li><input type="radio" name="theme-dropdown"
+                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Malam"
+                                value="night" /></li>
+                        <li><input type="radio" name="theme-dropdown"
+                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Senja"
+                                value="sunset" /></li>
+                    </ul>
+                </div>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero min-h-screen bg-base-100">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Segitiga Pascal</h1>
+                <h1 class="text-5xl">&nbsp;</h1>
+                <main>
+                    <div class="search" id="feature-search">
+                        <label class="form-control">
+                            <div class="label">
+                                <span class="label-text">Jumlah Baris</span>
+                            </div>
+                            <input type="number" id="rows" min="1" max="20" class="input input-bordered w-full max-w-xs">
+                                <h1 class="text-5xl">&nbsp;</h1>
+                            <button onclick="generatePascalTriangle()" class="btn btn-neutral">Generate</button>
+                    </div>
+                    <h1 class="text-5xl">&nbsp;</h1>
+                    <div id="triangle"></div>
+            </main>
+            <h1 class="text-5xl">&nbsp;</h1>
+            <footer>
+                <p class="text-center">Dibangun oleh <a href="https://rebornian48.github.io/">Rebornian48</a></p>
+            </footer>
+        </div>
     </div>
 
     <script src="./assets/js/pascal.js"></script>
