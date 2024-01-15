@@ -1,7 +1,11 @@
+var genbtn = document.getElementById("generate-btn");
+genbtn.addEventListener("click", generatePascalTriangle);
+
 /**
  * Description placeholder
  * @date 1/15/2024 - 6:28:23 AM
  */
+// Membuat fungsi untuk menghasilkan segitiga Pascal
 function generatePascalTriangle() {
   var rows = document.getElementById("rows").value;
   var triangle = document.getElementById("triangle");
