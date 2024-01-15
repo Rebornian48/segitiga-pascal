@@ -9,7 +9,7 @@ genbtn.addEventListener("click", generatePascalTriangle);
 function generatePascalTriangle() {
   var rows = document.getElementById("rows").value;
   var triangle = document.getElementById("triangle");
-  triangle.innerHTML = "";
+  triangle.textContent = "";
 
   // Membuat array kosong untuk menyimpan segitiga Pascal
   var pascal = [];
@@ -29,7 +29,7 @@ function generatePascalTriangle() {
   // Menampilkan segitiga Pascal ke dalam elemen HTML
   for (var k = 0; k < rows; k++) {
     var row = document.createElement("p");
-    row.innerHTML = pascal[k].join(" ");
+    row.textContent = pascal[k].join(" ");
     triangle.appendChild(row);
   }
 }
