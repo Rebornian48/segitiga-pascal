@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF6QHSQGFP"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QF6QHSQGFP"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag("config", "G-QF6QHSQGFP");
+      gtag("config", "G-QF6QHSQGFP");
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -20,73 +22,52 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="author" content="Rebornian48" />
     <title>Segitiga Pascal</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body>
-    <div class="navbar bg-base-100">
-        <div class="flex-1">
-            <a class="btn btn-ghost text-xl">Rebornian48</a>
-        </div>
-        <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
-                <div class="dropdown mb-5">
-                    <div tabindex="0" role="button" class="m-1">
-                        Tema
-                        <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
-                            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-                        </svg>
-                    </div>
-                    <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Gelap"
-                                value="dark" /></li>
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                aria-label="Terang" value="light" /></li>
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Malam"
-                                value="night" /></li>
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Senja"
-                                value="sunset" /></li>
-                    </ul>
-                </div>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            </ul>
-        </div>
-    </div>
-    <div class="hero min-h-screen bg-base-100">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <h1 class="text-5xl font-bold">Segitiga Pascal</h1>
-                <h1 class="text-5xl">&nbsp;</h1>
-                <main>
-                    <div class="search" id="feature-search">
-                        <label class="form-control">
-                            <div class="label">
-                                <span class="label-text">Jumlah Baris</span>
-                            </div>
-                            <input type="number" id="rows" min="1" max="20" class="input input-bordered w-full max-w-xs">
-                                <h1 class="text-5xl">&nbsp;</h1>
-                            <button class="btn btn-neutral" id="generate-btn">Generate</button>
-                    </div>
-                    <h1 class="text-5xl">&nbsp;</h1>
-                    <div id="triangle"></div>
-            </main>
+  <body>
+    <div class="bg-gray-900 text-gray-300 text-center py-24 sm:py-32">
+      <h1 class="text-5xl font-bold">Segitiga Pascal</h1>
+      <h1 class="text-5xl">&nbsp;</h1>
+      <main>
+        <div class="search" id="feature-search">
+          <label class="form-control">
+            <label
+              for="rows"
+              class="ml-px block pl-4 text-sm font-medium leading-6 text-gray-900"
+              >Baris</label
+            >
+            <div class="mt-2" align="center">
+              <input
+                type="number"
+                width="10%"
+                name="rows"
+                id="rows"
+                class="block w-100 rounded-full border-0 px-4 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="0"
+              />
+            </div>
             <h1 class="text-5xl">&nbsp;</h1>
-            <footer>
-                <p class="text-center">Dibangun oleh <a href="https://rebornian48.github.io/">Rebornian48</a></p>
-            </footer>
+            <button
+              type="button"
+              class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              id="generate-btn"
+            >
+              Generate
+            </button>
+          </label>
         </div>
+        <h1 class="text-5xl">&nbsp;</h1>
+        <div id="triangle"></div>
+      </main>
+      <h1 class="text-5xl">&nbsp;</h1>
+      <footer>
+        <p class="text-center">
+          Dibangun oleh <a href="https://rebornian48.github.io/">Rebornian48</a>
+        </p>
+      </footer>
     </div>
 
     <script src="./assets/js/pascal.js"></script>
-</body>
-
+  </body>
 </html>
